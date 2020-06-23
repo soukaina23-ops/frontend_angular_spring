@@ -1,0 +1,28 @@
+<h3 style="margin: 0 auto;width: 200px; ">    Create books</h3>
+<div [hidden]="submitted" style="margin: 0 auto;
+width: 400px; ">
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="name">name</label>
+      <input type="text" class="form-control" id="name" required [(ngModel)]="employee.name" name="nom">
+    </div>
+
+    <div class="form-group">
+      <label for="name">title</label>
+      <input type="text" class="form-control" id="title" required [(ngModel)]="employee.title" name="title">
+    </div>
+
+    <div class="form-group">
+      <label for="name">price</label>
+      <input type="text" class="form-control" id="price" required [(ngModel)]="employee.price" name="price">
+    </div>
+
+    <button type="submit" class="btn btn-success" style="margin-left:150px ;background-color: darkmagenta">add book</button>
+  </form>
+</div>
+
+<div [hidden]="!submitted">
+  <h4>You submitted successfully!</h4>
+
+  <!-- <button class="btn btn-success" (click)="newEmployee()">Add</button> -->
+</div>
